@@ -1,3 +1,11 @@
+/*
+ * ADC.c
+ *
+ * Created: 28.04.2024 02:13:30
+ *  Author: Martin
+ */ 
+
+
 #include <avr/io.h>
 
 void prepare(uint8_t input_pin){
