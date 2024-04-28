@@ -6,8 +6,8 @@
  */ 
 
 
-#ifndef INCFILE1_H_
-#define INCFILE1_H_
+#ifndef PWM_H_
+#define PWM_H_
 
 /* pwm start
  * Start single-slope PWM generator on PIN3
@@ -22,4 +22,4 @@ void pwm_start(uint16_t period, uint16_t duration);
  */
 void pwm_adjust(uint16_t duration);
 
-#endif /* INCFILE1_H_ */
+#endif /* PWM_H_ */
