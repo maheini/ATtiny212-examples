@@ -12,7 +12,7 @@ void pwm_start(uint16_t period, uint16_t duration){
 	TCA0.SINGLE.PERBUF = period;
 	TCA0.SINGLE.CMP0BUF = duration;
 	TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV256_gc	| TCA_SINGLE_ENABLE_bm; // CLK_PER divider by 256 & enable
-	PORTA.DIR |= PIN3_bm;	// Set pwm port as output
+	PORTA.DIR |= PIN3_bm;	// Set pwm pin as output
 }
 
 void pwm_adjust(uint16_t duration){
