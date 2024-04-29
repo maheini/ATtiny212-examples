@@ -136,12 +136,38 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="test.c">
+    <Compile Include="adc\adc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="adc\adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="blinkcode.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="blinkcode.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="prescaler\prescaler.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="prescaler\prescaler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pwm\pwm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pwm\pwm.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="adc" />
+    <Folder Include="prescaler" />
+    <Folder Include="pwm" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
