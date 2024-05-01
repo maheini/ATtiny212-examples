@@ -1,4 +1,4 @@
-# ATtiny 212 examples
+# ATtiny 212/412 examples
 
 A library with basic ATtiny control functions:
 
