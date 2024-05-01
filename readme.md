@@ -1,3 +1,8 @@
 # ATtiny 212 examples
 
-A bunch of basic ATtiny MCU sample codes for various functions.
+A library with basic ATtiny control functions:
+
+- [ADC - Analog Digital Comperator](./adc/)
+- [Prescaler setup-function](./prescaler/)
+- [PWM - Pulse width modulation](./pwm/)
+- [Buttonpress - listen on Pin](./buttonpress/)
