@@ -42,3 +42,25 @@ void listen_pin(uint8_t pin, void (*callback)()){
 	}
 	sei();
 }
+
+ISR (PORTA_PORT_vect){
+	if(PORTA.INTFLAGS & PIN0_bm){
+		registered_callback[0]();
+		PORTA.INTFLAGS &= PIN0_bm;
+	} else if(PORTA.INTFLAGS & PIN1_bm){
+		registered_callback[1]();
+		PORTA.INTFLAGS &= PIN1_bm;
+	} else if(PORTA.INTFLAGS & PIN2_bm){
+		registered_callback[2]();
+		PORTA.INTFLAGS &= PIN2_bm;
+	} else if(PORTA.INTFLAGS & PIN3_bm){
+		registered_callback[3]();
+		PORTA.INTFLAGS &= PIN3_bm;
+	} else if(PORTA.INTFLAGS & PIN6_bm){
+		registered_callback[6]();
+		PORTA.INTFLAGS &= PIN6_bm;
+	} else if(PORTA.INTFLAGS & PIN7_bm){
+		registered_callback[7]();
+		PORTA.INTFLAGS &= PIN7_bm;
+	}
+}
