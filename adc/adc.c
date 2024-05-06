@@ -20,7 +20,7 @@ void adc_prepare(uint8_t adc_pin){
 
 uint8_t adc_get_reading(){
 	ADC0.COMMAND |= ADC_STCONV_bm;	// start single conversion
-	while( !ADC_RESRDY_bm );	// wait for new result
+	while( !(ADC0.INTFLAGS & ADC_RESRDY_bm) );	// wait for new result
 	uint8_t val = ADC0.RES;
 	return val;
 	//return (uint8_t) (ADC0.RES & 0x00FF);	// return result as 8bit
